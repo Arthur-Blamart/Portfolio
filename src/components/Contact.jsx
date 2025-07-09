@@ -16,11 +16,35 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Ici vous pourrez ajouter la logique d'envoi d'email
-    alert('Message envoyé ! Je vous répondrai rapidement.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    // Endpoint Formspree - remplacez "your-form-id" par votre vrai ID après inscription
+    const endpoint = "https://formspree.io/f/mblyvpzp";
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        alert('Message envoyé ! Je vous répondrai rapidement.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        alert("Une erreur s'est produite lors de l'envoi du message.");
+      }
+    } catch (error) {
+      alert("Une erreur s'est produite lors de l'envoi du message.");
+    }
   };
 
   return (
@@ -41,7 +65,7 @@ const Contact = () => {
                 <div className="method-icon">📧</div>
                 <div className="method-info">
                   <h4>Email</h4>
-                  <p>arthur.dev@example.com</p>
+                  <p>arthur.blamart.dev@gmail.com</p>
                 </div>
               </div>
               
@@ -49,7 +73,7 @@ const Contact = () => {
                 <div className="method-icon">📱</div>
                 <div className="method-info">
                   <h4>Téléphone</h4>
-                  <p>+33 6 XX XX XX XX</p>
+                  <p>+33 7 70 46 80 83</p>
                 </div>
               </div>
               
@@ -57,15 +81,14 @@ const Contact = () => {
                 <div className="method-icon">📍</div>
                 <div className="method-info">
                   <h4>Localisation</h4>
-                  <p>France (Remote possible)</p>
+                  <p>Lannion, France (Remote possible)</p>
                 </div>
               </div>
             </div>
             
             <div className="social-links">
-              <a href="#" className="social-link linkedin">LinkedIn</a>
-              <a href="#" className="social-link github">GitHub</a>
-              <a href="#" className="social-link twitter">Twitter</a>
+              <a href="https://fr.linkedin.com/in/arthur-blamart-081ba9294" className="social-link linkedin">LinkedIn</a>
+              <a href="https://github.com//Arthur-Blamart" className="social-link github">GitHub</a>
             </div>
           </div>
           
