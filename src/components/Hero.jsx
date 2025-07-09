@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import profilePhoto from '../assets/moi.jpg';
 
 const Hero = () => {
   return (
@@ -33,7 +34,7 @@ const Hero = () => {
         </div>
         <div className="hero-image">
           <div className="avatar-placeholder">
-            <span>👨‍💻</span>
+            <img src={profilePhoto} alt="Arthur - Développeur Freelance" className="profile-photo" />
           </div>
         </div>
       </div>
