@@ -11,11 +11,12 @@ const Hero = () => {
             Salut, je suis <span className="highlight">Arthur</span>
           </h1>
           <h2 className="hero-subtitle">
-            Développeur Freelance passionné
+            Étudiant ingénieur - Développeur Freelance
           </h2>
           <p className="hero-description">
-            Je crée des applications web modernes et performantes avec React, Node.js 
-            et les dernières technologies. Transformons ensemble vos idées en réalité numérique.
+            Je désire mettre mes compétences au service de vos projets.
+            Que ce soit pour créer des applications web modernes, des sites vitrine ou des solutions sur mesure,
+            je suis là pour transformer vos idées en réalité numérique.
           </p>
           <div className="hero-buttons">
             <button 
