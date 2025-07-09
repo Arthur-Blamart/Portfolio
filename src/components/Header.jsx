@@ -13,7 +13,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav">
         <div className="nav-brand">
-          <h2>Arthur</h2>
+          <h2>Arthur Blamart</h2>
         </div>
         <ul className="nav-menu">
           <li><button onClick={() => scrollToSection('about')}>À propos</button></li>
