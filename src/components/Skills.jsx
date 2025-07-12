@@ -1,61 +1,121 @@
 import React from 'react';
 import './Skills.css';
+// Import des icônes depuis react-icons
+import { 
+  SiC, 
+  SiJavascript, 
+  SiPython, 
+  SiReact, 
+  SiNodedotjs,
+  SiHtml5,
+  SiCss3,
+  SiGit,
+  SiGithub,
+  SiMysql,
+  SiGnubash,
+  SiLatex
+} from 'react-icons/si';
+import { FaJava } from 'react-icons/fa';
 
 const Skills = () => {
-  const skillCategories = [
-    {
+  const skillCategories = {
+    frontend: {
       title: 'Frontend',
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'TypeScript', level: 80 },
-        { name: 'CSS/SASS', level: 85 },
-        { name: 'HTML5', level: 90 }
+        {
+          title: 'HTML5',
+          icon: <SiHtml5 />,
+          color: '#E34F26'
+        },
+        {
+          title: 'CSS3',
+          icon: <SiCss3 />,
+          color: '#1572B6'
+        },
+        {
+          title: 'JavaScript',
+          icon: <SiJavascript />,
+          color: '#F7DF1E'
+        },
+        {
+          title: 'React',
+          icon: <SiReact />,
+          color: '#61DAFB'
+        }
       ]
     },
-    {
+    backend: {
       title: 'Backend',
       skills: [
-        { name: 'Node.js', level: 80 },
-        { name: 'Express.js', level: 75 },
-        { name: 'MongoDB', level: 70 },
-        { name: 'PostgreSQL', level: 65 },
-        { name: 'API REST', level: 85 }
+        {
+          title: 'C',
+          icon: <SiC />,
+          color: '#A8B9CC'
+        },
+        {
+          title: 'Java',
+          icon: <FaJava />,
+          color: '#ED8B00'
+        },
+        {
+          title: 'Python',
+          icon: <SiPython />,
+          color: '#3776AB'
+        },
+        {
+          title: 'Node.js',
+          icon: <SiNodedotjs />,
+          color: '#339933'
+        },
+        {
+          title: 'MySQL',
+          icon: <SiMysql />,
+          color: '#4479A1'
+        }
       ]
     },
-    {
-      title: 'Outils & Autres',
+    tools: {
+      title: 'Outils',
       skills: [
-        { name: 'Git', level: 85 },
-        { name: 'Docker', level: 60 },
-        { name: 'Figma', level: 70 },
-        { name: 'Vite', level: 80 },
-        { name: 'Webpack', level: 65 }
+        {
+          title: 'Git',
+          icon: <SiGit />,
+          color: '#F05032'
+        },
+        {
+          title: 'GitHub',
+          icon: <SiGithub />,
+          color: '#181717'
+        },
+        {
+          title: 'LaTeX',
+          icon: <SiLatex />,
+          color: '#008080'
+        },
+        {
+          title: 'Bash',
+          icon: <SiGnubash />,
+          color: '#4EAA25'
+        }
       ]
     }
-  ];
+  };
 
   return (
     <section className="skills" id="skills">
       <div className="container">
         <h2 className="section-title">Mes Compétences</h2>
-        <div className="skills-grid">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
+        <div className="skills-categories">
+          {Object.entries(skillCategories).map(([categoryKey, category]) => (
+            <div key={categoryKey} className="skill-category">
               <h3 className="category-title">{category.title}</h3>
               <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-header">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
+                {category.skills.map((skill, index) => (
+                  <div key={index} className="skill-item">
+                    <div className="skill-icon" style={{ color: skill.color }}>
+                      {skill.icon}
                     </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                    <span className="skill-name">{skill.title}</span>
                   </div>
                 ))}
               </div>
