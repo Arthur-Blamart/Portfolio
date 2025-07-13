@@ -10,9 +10,9 @@ const About = () => {
           <div className="about-text">
             <h3>Mon parcours</h3>
             <p>
-              Passionné par le développement web depuis plusieurs années, j'ai commencé 
-              par apprendre en autodidacte avant de me spécialiser dans les technologies 
-              modernes comme React, Node.js et TypeScript.
+              Passionné par le développement informatique depuis plusieurs années, j'ai commencé 
+              par apprendre en autodidacte avant de compléter mes compétences par ma formation
+              en ingénierie informatique.
             </p>
             <p>
               Aujourd'hui, en tant que développeur freelance, j'accompagne mes clients 
