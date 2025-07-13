@@ -25,18 +25,16 @@ const Footer = () => {
           <div className="footer-right">
             <h4>Contact</h4>
             <p>arthur.dev@example.com</p>
-            <p>+33 6 XX XX XX XX</p>
+            <p>+33 7 70 46 80 83</p>
             <div className="footer-socials">
-              <a href="#" aria-label="LinkedIn">💼</a>
-              <a href="#" aria-label="GitHub">🔗</a>
-              <a href="#" aria-label="Twitter">🐦</a>
+              <a href="https://fr.linkedin.com/in/arthur-blamart-081ba9294" aria-label="LinkedIn">💼</a>
+              <a href="https://github.com//Arthur-Blamart" aria-label="GitHub">🔗</a>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
           <p>&copy; 2025 Arthur. Tous droits réservés.</p>
-          <p>Développé avec ❤️ et React</p>
         </div>
       </div>
     </footer>
