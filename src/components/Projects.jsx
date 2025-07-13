@@ -4,40 +4,20 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-commerce React',
-      description: 'Application e-commerce complète avec panier, paiement et gestion des commandes.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: '🛒',
-      github: '#',
-      demo: '#',
+      title: 'Copie de Wordle',
+      description: 'Clone du jeu Wordle avec des fonctionnalités interactives.',
+      technologies: ['React', 'Node.js', 'Firebase', 'Vite'],
+      image: '🕹️',
+      github: 'https://github.com/Arthur-Blamart/guessTheWord',
       status: 'Terminé'
     },
     {
-      title: 'Dashboard Analytics',
-      description: 'Interface d\'administration avec graphiques et analyse de données en temps réel.',
-      technologies: ['React', 'Chart.js', 'Express', 'PostgreSQL'],
-      image: '📊',
-      github: '#',
-      demo: '#',
-      status: 'Terminé'
-    },
-    {
-      title: 'App Mobile React Native',
-      description: 'Application mobile cross-platform pour la gestion de tâches et productivité.',
-      technologies: ['React Native', 'Firebase', 'Redux'],
-      image: '📱',
-      github: '#',
-      demo: '#',
+      title: 'Gestion Client',
+      description: 'API REST pour la gestion des clients avec interfaces pour manipulation des données.',
+      technologies: ['REST', 'API', 'Swagger', 'Express', 'Node.js', 'React', 'Tailwind CSS'],
+      image: '💼',
+      github: 'https://github.com/Arthur-Blamart/GestionClient',
       status: 'En cours'
-    },
-    {
-      title: 'API REST Microservices',
-      description: 'Architecture microservices avec authentification JWT et documentation Swagger.',
-      technologies: ['Node.js', 'Docker', 'JWT', 'Swagger'],
-      image: '🔧',
-      github: '#',
-      demo: '#',
-      status: 'Terminé'
     }
   ];
 
@@ -67,9 +47,6 @@ const Projects = () => {
                 <div className="project-links">
                   <a href={project.github} className="project-link github" target="_blank" rel="noopener noreferrer">
                     <span>GitHub</span>
-                  </a>
-                  <a href={project.demo} className="project-link demo" target="_blank" rel="noopener noreferrer">
-                    <span>Demo</span>
                   </a>
                 </div>
               </div>
