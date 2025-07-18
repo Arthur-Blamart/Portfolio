@@ -24,7 +24,7 @@ const Footer = () => {
           
           <div className="footer-right">
             <h4>Contact</h4>
-            <p>arthur.dev@example.com</p>
+            <p>arthur.blamart.dev@gmail.com</p>
             <p>+33 7 70 46 80 83</p>
             <div className="footer-socials">
               <a href="https://fr.linkedin.com/in/arthur-blamart-081ba9294" aria-label="LinkedIn">💼</a>
