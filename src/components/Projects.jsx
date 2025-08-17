@@ -23,12 +23,12 @@ const Projects = () => {
 
   const websites = [
     {
-      title: 'Portfolio Personnel',
-      description: 'Site portfolio moderne et responsive pour présenter mes compétences et projets.',
+      title: 'Site Vitrine pour un gîte',
+      description: 'Site portfolio moderne et responsive afin de promouvoir un gîte.',
       technologies: ['React', 'Vite', 'CSS3', 'GitHub Pages'],
-      image: '🌐',
-      github: 'https://github.com/Arthur-Blamart/Arthur-Blamart.github.io',
-      url: 'https://arthur-blamart.github.io',
+      image: '🏡',
+      github: 'https://github.com/Arthur-Blamart/client-lespiguet',
+      url: 'https://arthur-blamart.github.io/client-lespiguet/',
       status: 'Terminé'
     },
     {
