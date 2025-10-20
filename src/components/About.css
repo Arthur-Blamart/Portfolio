@@ -20,7 +20,6 @@
   max-width: 800px;
   margin: 0 auto;
 }
-
 .about-text h3 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -94,5 +93,170 @@
   
   .philosophy-item {
     padding: 1.5rem;
+  }
+}
+
+/* New styles for education and engagements */
+.education-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.education-item {
+  background: white;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+  position: relative;
+  padding-left: 7rem; /* space for larger icon */
+}
+
+.education-item h4 {
+  margin: 0 0 0.25rem 0;
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.education-date {
+  display: block;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.engagements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+  margin-top: 1rem;
+}
+
+.engagement-item {
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.03);
+  position: relative;
+  padding-left: 7rem; /* space for larger icon */
+}
+
+.item-icon {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  bottom: 0.5rem; /* span almost full height of the parent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: #ffffff; /* clean white background */
+  border: 1px solid rgba(15,23,42,0.06);
+  box-shadow: 0 4px 10px rgba(16,24,40,0.04);
+  overflow: hidden;
+  width: 5.5rem; /* fixed width so it doesn't overlap content */
+  padding: 0.35rem; /* breathing room for logos */
+}
+
+.item-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain; /* keep aspect ratio and avoid overflow */
+  display: block;
+}
+
+/* Hover effects: lift the card and slightly scale the logo, like in Skills */
+.education-item,
+.engagement-item {
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.education-item:hover,
+.engagement-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+}
+
+.item-icon {
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.education-item:hover .item-icon,
+.engagement-item:hover .item-icon {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(16,24,40,0.06);
+}
+
+.item-icon img {
+  transition: transform 0.28s ease;
+}
+
+.education-item:hover .item-icon img,
+.engagement-item:hover .item-icon img {
+  transform: scale(1.06);
+}
+
+.engagement-item h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.engagement-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 0.75rem 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.25rem;
+  justify-items: center; /* center items horizontally */
+}
+
+.skills-list li {
+  background: linear-gradient(90deg, rgba(59,130,246,0.12), rgba(20,184,166,0.06));
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  color: #0f172a;
+  font-weight: 700;
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 1rem;
+  text-align: center; /* center the text horizontally */
+  min-width: 160px;
+  display: flex;
+  align-items: center; /* center vertically */
+  justify-content: center;
+  padding: 1.15rem 1.25rem; /* increased vertical padding */
+  transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease;
+}
+
+/* Hover lift + shadow + slight scale for savoir-être items */
+.skills-list li:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+}
+
+@media (max-width: 768px) {
+  .engagements-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+  .education-item,
+  .engagement-item {
+    padding-left: 1.25rem; /* reduce space on small screens */
+  }
+  .item-icon {
+    left: 0.75rem;
+    width: 3.25rem;
+    height: 3.25rem;
   }
 }

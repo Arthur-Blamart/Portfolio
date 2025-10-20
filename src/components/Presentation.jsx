@@ -7,16 +7,14 @@ const Hero = () => {
     <section className="hero" id="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h1 className="hero-title">
-            Salut, je suis <span className="highlight">Arthur</span>
-          </h1>
+          <h1 className="hero-title">Arthur BLAMART</h1>
           <h2 className="hero-subtitle">
-            Étudiant ingénieur - Développeur Freelance
+            Élève-ingénieur en informatique à l'<span className="highlight">ENSSAT</span> & Développeur React & JavaScript
           </h2>
           <p className="hero-description">
-            Je désire mettre mes compétences au service de vos projets.
-            Que ce soit pour créer des applications web modernes, des sites vitrine ou des solutions sur mesure,
-            je suis là pour transformer vos idées en réalité numérique.
+            Élève-ingénieur en informatique à l'ENSSAT. Mon parcours est guidé par une passion
+            insatiable pour le développement et l'innovation. Ce portfolio présente mes projets académiques
+            et personnels qui témoignent de ma volonté de maîtriser les technologies du numérique.
           </p>
           <div className="hero-buttons">
             <button 
@@ -35,7 +33,7 @@ const Hero = () => {
         </div>
         <div className="hero-image">
           <div className="avatar-placeholder">
-            <img src={profilePhoto} alt="Arthur - Développeur Freelance" className="profile-photo" />
+            <img src={profilePhoto} alt="Arthur Blamart" className="profile-photo" />
           </div>
         </div>
       </div>

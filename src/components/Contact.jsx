@@ -65,8 +65,8 @@ const Contact = () => {
                 <div className="method-icon">📧</div>
                 <div className="method-info">
                   <h4>Email</h4>
-                  <a href="mailto:arthur.blamart.dev@gmail.com" className="contact-link">
-                    arthur.blamart.dev@gmail.com
+                  <a href="mailto:pro@arthurblamart.fr" className="contact-link">
+                    pro@arthurblamart.fr
                   </a>
                 </div>
               </div>
