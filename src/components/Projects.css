@@ -67,8 +67,24 @@
   justify-content: center;
 }
 
-.project-emoji {
-  font-size: 4rem;
+.project-icon {
+  /* subtle frosted circular badge so icon sits nicely on any gradient */
+  background: rgba(255,255,255,0.08);
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(16,24,40,0.12);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(4px);
+}
+
+.project-icon svg {
+  width: 48px;
+  height: 48px;
+  color: #ffffff; /* white icons look good on colored gradients */
 }
 
 .project-status {

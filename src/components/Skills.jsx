@@ -14,7 +14,8 @@ import {
   SiMysql,
   SiGnubash,
   SiLatex,
-  SiDocker
+  SiDocker,
+  SiGithubactions
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 
@@ -87,6 +88,11 @@ const Skills = () => {
           title: 'GitHub',
           icon: <SiGithub />,
           color: '#181717'
+        },
+        {
+          title: 'GitHub Actions',
+          icon: <SiGithubactions />,
+          color: '#2088FF'
         },
         {
           title: 'LaTeX',

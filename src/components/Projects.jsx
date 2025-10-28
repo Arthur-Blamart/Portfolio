@@ -1,5 +1,7 @@
 import React from 'react';
 import './Projects.css';
+import { SiReact, SiNodedotjs, SiFirebase, SiVite, SiCss3, SiTailwindcss, SiExpress, SiGithub } from 'react-icons/si';
+import { FaServer, FaCode } from 'react-icons/fa';
 
 const Projects = () => {
   const applications = [
@@ -42,10 +44,26 @@ const Projects = () => {
     }
   ];
 
+  const selectIcon = (technologies) => {
+    const techs = technologies.map(t => t.toLowerCase());
+    if (techs.some(t => t.includes('react'))) return <SiReact />;
+    if (techs.some(t => t.includes('node'))) return <SiNodedotjs />;
+    if (techs.some(t => t.includes('firebase'))) return <SiFirebase />;
+    if (techs.some(t => t.includes('vite'))) return <SiVite />;
+    if (techs.some(t => t.includes('tailwind'))) return <SiTailwindcss />;
+    if (techs.some(t => t.includes('express'))) return <SiExpress />;
+    if (techs.some(t => t.includes('css'))) return <SiCss3 />;
+    if (techs.some(t => t.includes('github'))) return <SiGithub />;
+    if (techs.some(t => t.includes('rest') || t.includes('api') || t.includes('swagger'))) return <FaServer />;
+    return <FaCode />;
+  };
+
   const renderProjectCard = (project, index) => (
     <div key={index} className="project-card">
       <div className="project-image">
-        <span className="project-emoji">{project.image}</span>
+        <div className="project-icon" aria-hidden>
+          {selectIcon(project.technologies)}
+        </div>
         <div className="project-status">
           <span className={`status-badge ${project.status === 'Terminé' ? 'completed' : 'in-progress'}`}>
             {project.status}
