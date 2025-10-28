@@ -25,7 +25,7 @@ const About = () => {
 
                 <div className="education-item">
                   <div className="item-icon"><img src={logoDescartes} alt="Descartes"/></div>
-                  <h4>Classe préparatoire scientifique (MP)</h4>
+                  <h4>Classe préparatoire scientifique (MPI)</h4>
                   <span className="education-date">Septembre 2021 - Juillet 2023</span>
                   <p>Filière Mathématiques, Physique et Informatique — acquisition d'un solide socle en informatique théorique et mathématiques.</p>
                 </div>
