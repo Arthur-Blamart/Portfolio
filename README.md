@@ -1,12 +1,8 @@
 # Portfolio Arthur Blamart
 
-## Développeur Freelance
+## Contexte
 
-Bienvenue sur mon portfolio ! Je suis Arthur Blamart, développeur freelance passionné par la création d'expériences web exceptionnelles.
-
-### À propos
-
-Ce portfolio présente mes compétences, projets et expériences en développement web. Spécialisé dans les technologies modernes, je crée des applications web performantes et sur mesure.
+Portfolio pour mettre en valeur mes compétences et mes expériences.
 
 
 ### Installation et démarrage
@@ -27,26 +23,4 @@ npm run build
 
 ### Déploiement
 
-Le portfolio est automatiquement déployé sur GitHub Pages à l'adresse :
-[https://arthur-blamart.github.io](https://arthur-blamart.github.io)
-
-### Responsive Design
-
-Le portfolio est entièrement responsive et optimisé pour :
-- Desktop
-- Mobile
-- Tablette
-
-### Contact
-
-Pour tout projet ou collaboration, n'hésitez pas à me contacter :
-
-**Email** : arthur.blamart.dev@gmail.com
-
-**LinkedIn** : [Arthur Blamart](https://fr.linkedin.com/in/arthur-blamart-081ba9294)
-
-**GitHub** : [Arthur-Blamart](https://github.com/Arthur-Blamart)
-
-
-
-**© 2025 Arthur Blamart - Développeur Freelance**
+Le portfolio est automatiquement déployé grâce au workflow Github Action dans `.github/workflows/ftp-deploy.yml`
