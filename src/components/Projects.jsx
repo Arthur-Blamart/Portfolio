@@ -6,19 +6,19 @@ import { FaServer, FaCode } from 'react-icons/fa';
 const Projects = () => {
   const applications = [
     {
-      title: 'Copie de Wordle',
-      description: 'Clone du jeu Wordle avec des fonctionnalités interactives.',
-      technologies: ['React', 'Node.js', 'Firebase', 'Vite'],
-      image: '🕹️',
-      github: 'https://github.com/Arthur-Blamart/guessTheWord',
-      status: 'Terminé'
-    },
-    {
       title: 'Gestion Client',
       description: 'API REST pour la gestion des clients avec interfaces pour manipulation des données.',
       technologies: ['REST', 'API', 'Swagger', 'Express', 'Node.js', 'React', 'Tailwind CSS'],
       image: '💼',
       github: 'https://github.com/Arthur-Blamart/GestionClient',
+      status: 'En cours'
+    },
+    {
+      title: 'Simulation course IA',
+      description: 'Algorithme de simulation de course utilisant un algorithme de réfléxion et un moteur physique',
+      technologies: ['Python'],
+      image: '🕹️',
+      github: 'https://github.com/Arthur-Blamart/parcours-generatif',
       status: 'En cours'
     }
   ];
@@ -26,20 +26,20 @@ const Projects = () => {
   const websites = [
     {
       title: 'Site Vitrine pour un gîte',
-      description: 'Site portfolio moderne et responsive afin de promouvoir un gîte.',
-      technologies: ['React', 'Vite', 'CSS3', 'GitHub Pages'],
+      description: 'Promotions et présentation de gîte.',
+      technologies: ['React', 'Vite', 'OVH'],
       image: '🏡',
       github: 'https://github.com/Arthur-Blamart/client-lespiguet',
-      url: 'https://arthur-blamart.github.io/client-lespiguet/',
+      url: 'https://location-artynevez.fr',
       status: 'Terminé'
     },
     {
-      title: 'Site pour une Mairie',
-      description: 'Site demo pour une mairie avec informations, actualités et démarches administratives.',
-      technologies: ['React', 'Vite', 'CSS3', 'GitHub Pages'],
+      title: 'Portfolio Personnel',
+      description: 'Site personnel pour présenter mes projets et compétences.',
+      technologies: ['React', 'Vite', 'OVH'],
       image: '🏛️',
-      github: 'https://github.com/Arthur-Blamart/demo-mairie',
-      url: 'https://arthur-blamart.github.io/demo-mairie/',
+      github: 'https://github.com/Arthur-Blamart/Portfolio',
+      url: 'https://arthurblamart.fr',
       status: 'Terminé'
     }
   ];
