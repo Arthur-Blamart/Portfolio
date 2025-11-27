@@ -45,8 +45,11 @@
   transition: transform 0.3s ease;
 }
 
-.timeline-content:hover {
-  transform: translateX(10px);
+/* Only apply hover transform on devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+  .timeline-content:hover {
+    transform: translateX(10px);
+  }
 }
 
 .experience-header {
@@ -148,5 +151,61 @@
   .experience-meta {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* Additional tweaks for small phones to avoid horizontal overflow and improve spacing */
+@media (max-width: 420px) {
+  .timeline {
+    max-width: 100%;
+    margin: 2rem auto 0;
+  }
+
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-item {
+    padding-left: 44px;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-marker {
+    left: 4px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .experience-title {
+    font-size: 1.125rem;
+  }
+
+  .period {
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-marker {
+    left: 3px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .experience-title {
+    font-size: 1rem;
   }
 }

@@ -250,13 +250,17 @@
   .skills-list {
     grid-template-columns: 1fr;
   }
+  /* Ensure enough left padding so the icon does not overlap content
+     padding-left should be at least: left offset + icon width + gap */
   .education-item,
   .engagement-item {
-    padding-left: 1.25rem; /* reduce space on small screens */
+    padding-left: calc(0.75rem + 3.25rem + 0.75rem); /* left offset + icon width + inner gap */
   }
   .item-icon {
     left: 0.75rem;
     width: 3.25rem;
     height: 3.25rem;
+    top: 0.75rem; /* don't stretch to the bottom on small cards */
+    bottom: auto;
   }
 }
