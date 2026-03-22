@@ -95,7 +95,7 @@ const Projects = () => {
   return (
     <section className="projects" id="projects">
       <div className="container">
-        <h2 className="section-title">Mes Projets</h2>
+        <h2 className="section-title">Mes Projets de dev</h2>
         
         <div className="projects-sections">
           {/* Section Applications */}

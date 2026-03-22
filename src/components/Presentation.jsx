@@ -9,12 +9,13 @@ const Hero = () => {
         <div className="hero-text">
           <h1 className="hero-title">Arthur BLAMART</h1>
           <h2 className="hero-subtitle">
-            Élève-ingénieur en informatique à l'<span className="highlight">ENSSAT</span> & Développeur React & JavaScript
+            Élève-ingénieur en informatique à l'ENSSAT &
+            Étudiant-Entrepreneur de Pépite Bretagne
           </h2>
           <p className="hero-description">
-            Élève-ingénieur en informatique à l'ENSSAT. Mon parcours est guidé par une passion
-            insatiable pour le développement et l'innovation. Ce portfolio présente mes projets académiques
-            et personnels qui témoignent de ma volonté de maîtriser les technologies du numérique.
+            Élève-ingénieur en informatique à l'ENSSAT. Mon parcours académique est guidé par une passion
+            insatiable pour le développement et l'innovation. J'ai dépassé le champ de mes compétences techniques d'ingénieur par mon expérience
+            d'étudiant-entrepreneur
           </p>
           <div className="hero-buttons">
             <button 
