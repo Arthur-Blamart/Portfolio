@@ -1,0 +1,174 @@
+{
+  "header": {
+    "brand": "Arthur Blamart",
+    "ariaToggle": "Open or close navigation menu",
+    "menu": [
+      { "id": "about", "label": "About" },
+      { "id": "skills", "label": "Skills" },
+      { "id": "projects", "label": "Projects" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "lang": {
+      "fr": "FR",
+      "en": "EN"
+    }
+  },
+  "presentation": {
+    "title": "Arthur BLAMART",
+    "subtitle": "Computer engineering student at ENSSAT & Étudiant-Entrepreneur with Pépite Bretagne",
+    "description": "Computer engineering student at ENSSAT. My academic journey is driven by a strong passion for development and innovation. I have expanded beyond core engineering technical skills through my Étudiant-Entrepreneur experience.",
+    "projectsButton": "View my projects",
+    "contactButton": "Contact me",
+    "profileAlt": "Arthur Blamart"
+  },
+  "about": {
+    "sectionTitle": "About me",
+    "rewardsTitle": "My awards",
+    "reward": {
+      "title": "Lauréat Coup de pouce Pépite",
+      "date": "February 2025",
+      "beforeKeyword1": "Selected by ",
+      "keyword1": "Pépite Bretagne",
+      "between1": " for innovation and the potential of ",
+      "keyword2": "Vizeo",
+      "between2": ". This award includes a €2,000 grant from the ",
+      "keyword3": "Fondation de l'Université de Rennes",
+      "afterKeyword3": ". This funding is directly invested in purchasing components for our MVP and launching the CE pre-certification process."
+    },
+    "educationTitle": "Academic background",
+    "education": [
+      {
+        "iconAlt": "ENSSAT",
+        "title": "École Nationale Supérieure des Sciences Appliquées et de Technologie (ENSSAT)",
+        "date": "September 2023 - Present",
+        "description": "Computer engineering program — coursework and projects in project management, software architecture, and web development."
+      },
+      {
+        "iconAlt": "Descartes",
+        "title": "Scientific preparatory class (MPI)",
+        "date": "September 2021 - July 2023",
+        "description": "Mathematics, Physics, and Computer Science track — strong foundation in theoretical computer science and mathematics."
+      }
+    ],
+    "engagementsTitle": "Involvement & missions",
+    "engagements": [
+      {
+        "iconAlt": "Pépite Bretagne",
+        "title": "Étudiant-Entrepreneur — PEPITE Bretagne",
+        "date": "Feb 2025 - Mar 2025",
+        "description": "Development of an entrepreneurial project with mentoring and training from professionals."
+      },
+      {
+        "iconAlt": "BRIO",
+        "title": "Student Ambassador — BRIO (University of Rennes)",
+        "description": "Guidance support for high school students and awareness activities."
+      },
+      {
+        "iconAlt": "JES",
+        "title": "Association President - Junior ENSSAT Services",
+        "date": "Nov 2024 - May 2025",
+        "description": "Team and association management, service mission leadership, and event organization."
+      },
+      {
+        "iconAlt": "Docker",
+        "title": "DevOps mission",
+        "date": "October 2025",
+        "description": "Containerization with Docker and deployment of an application on Scaleway. Setup of a continuous deployment pipeline."
+      }
+    ],
+    "softSkillsTitle": "Soft skills",
+    "softSkills": [
+      "Rigor",
+      "Adaptability",
+      "Team spirit",
+      "Autonomy",
+      "Organization & project management"
+    ]
+  },
+  "skills": {
+    "sectionTitle": "My Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools"
+    }
+  },
+  "projects": {
+    "sectionTitle": "My Development Projects",
+    "applicationsTitle": "Applications",
+    "websitesTitle": "Websites",
+    "statuses": {
+      "inProgress": "In progress",
+      "completed": "Completed"
+    },
+    "viewSite": "View website",
+    "applications": [
+      {
+        "title": "Client Management",
+        "description": "REST API for customer management with interfaces for data handling.",
+        "technologies": ["REST", "API", "Swagger", "Express", "Node.js", "React", "Tailwind CSS"],
+        "github": "https://github.com/Arthur-Blamart/GestionClient",
+        "status": "inProgress"
+      },
+      {
+        "title": "AI race simulation",
+        "description": "Race simulation algorithm using a decision-making algorithm and a physics engine.",
+        "technologies": ["Python"],
+        "github": "https://github.com/Arthur-Blamart/parcours-generatif",
+        "status": "inProgress"
+      }
+    ],
+    "websites": [
+      {
+        "title": "Showcase website for a guesthouse",
+        "description": "Promotion and presentation of a guesthouse.",
+        "technologies": ["React", "Vite", "OVH"],
+        "github": "https://github.com/Arthur-Blamart/client-lespiguet",
+        "url": "https://location-artynevez.fr",
+        "status": "completed"
+      },
+      {
+        "title": "Personal portfolio",
+        "description": "Personal website to showcase my projects and skills.",
+        "technologies": ["React", "Vite", "OVH"],
+        "github": "https://github.com/Arthur-Blamart/Portfolio",
+        "url": "https://arthurblamart.fr",
+        "status": "completed"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Contact me",
+    "title": "Let's discuss your project",
+    "description": "Do you have a project in mind? Feel free to contact me to discuss your needs. I will be happy to help you achieve your goals.",
+    "methods": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "locationValue": "Lannion, France (Remote possible)"
+    },
+    "form": {
+      "name": "Name *",
+      "email": "Email *",
+      "subject": "Subject",
+      "message": "Message *",
+      "submit": "Send message"
+    },
+    "alerts": {
+      "success": "Message sent! I will reply quickly.",
+      "error": "An error occurred while sending the message."
+    }
+  },
+  "footer": {
+    "description": "Freelance developer passionate about building exceptional web experiences.",
+    "navigation": "Navigation",
+    "links": [
+      { "id": "about", "label": "About" },
+      { "id": "skills", "label": "Skills" },
+      { "id": "projects", "label": "Projects" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "contact": "Contact",
+    "copyright": "© 2025 Arthur. All rights reserved."
+  }
+}

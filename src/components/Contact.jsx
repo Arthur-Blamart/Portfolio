@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 
-const Contact = () => {
+const Contact = ({ content }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,34 +37,30 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        alert('Message envoyé ! Je vous répondrai rapidement.');
+        alert(content.alerts.success);
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        alert("Une erreur s'est produite lors de l'envoi du message.");
+        alert(content.alerts.error);
       }
     } catch (error) {
-      alert("Une erreur s'est produite lors de l'envoi du message.");
+      alert(content.alerts.error);
     }
   };
 
   return (
     <section className="contact" id="contact">
       <div className="container">
-        <h2 className="section-title">Contactez-moi</h2>
+        <h2 className="section-title">{content.sectionTitle}</h2>
         <div className="contact-content">
           <div className="contact-info">
-            <h3>Discutons de votre projet</h3>
-            <p>
-              Vous avez un projet en tête ? N'hésitez pas à me contacter pour 
-              discuter de vos besoins. Je serais ravi de vous accompagner dans 
-              la réalisation de vos objectifs.
-            </p>
+            <h3>{content.title}</h3>
+            <p>{content.description}</p>
             
             <div className="contact-methods">
               <div className="contact-method">
                 <div className="method-icon">📧</div>
                 <div className="method-info">
-                  <h4>Email</h4>
+                  <h4>{content.methods.email}</h4>
                   <a href="mailto:pro@arthurblamart.fr" className="contact-link">
                     pro@arthurblamart.fr
                   </a>
@@ -74,7 +70,7 @@ const Contact = () => {
               <div className="contact-method">
                 <div className="method-icon">📱</div>
                 <div className="method-info">
-                  <h4>Téléphone</h4>
+                  <h4>{content.methods.phone}</h4>
                   <a href="tel:+33770468083" className="contact-link">
                     +33 7 70 46 80 83
                   </a>
@@ -84,8 +80,8 @@ const Contact = () => {
               <div className="contact-method">
                 <div className="method-icon">📍</div>
                 <div className="method-info">
-                  <h4>Localisation</h4>
-                  <p>Lannion, France (Remote possible)</p>
+                  <h4>{content.methods.location}</h4>
+                  <p>{content.methods.locationValue}</p>
                 </div>
               </div>
             </div>
@@ -98,7 +94,7 @@ const Contact = () => {
           
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Nom *</label>
+              <label htmlFor="name">{content.form.name}</label>
               <input
                 type="text"
                 id="name"
@@ -110,7 +106,7 @@ const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="email">Email *</label>
+              <label htmlFor="email">{content.form.email}</label>
               <input
                 type="email"
                 id="email"
@@ -122,7 +118,7 @@ const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="subject">Sujet</label>
+              <label htmlFor="subject">{content.form.subject}</label>
               <input
                 type="text"
                 id="subject"
@@ -133,7 +129,7 @@ const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label htmlFor="message">Message *</label>
+              <label htmlFor="message">{content.form.message}</label>
               <textarea
                 id="message"
                 name="message"
@@ -145,7 +141,7 @@ const Contact = () => {
             </div>
             
             <button type="submit" className="submit-btn">
-              Envoyer le message
+              {content.form.submit}
             </button>
           </form>
         </div>

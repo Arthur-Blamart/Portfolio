@@ -1,0 +1,174 @@
+{
+  "header": {
+    "brand": "Arthur Blamart",
+    "ariaToggle": "Ouvrir ou fermer le menu de navigation",
+    "menu": [
+      { "id": "about", "label": "À propos" },
+      { "id": "skills", "label": "Compétences" },
+      { "id": "projects", "label": "Projets" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "lang": {
+      "fr": "FR",
+      "en": "EN"
+    }
+  },
+  "presentation": {
+    "title": "Arthur BLAMART",
+    "subtitle": "Élève-ingénieur en informatique à l'ENSSAT & Étudiant-Entrepreneur de Pépite Bretagne",
+    "description": "Élève-ingénieur en informatique à l'ENSSAT. Mon parcours académique est guidé par une passion insatiable pour le développement et l'innovation. J'ai dépassé le champ de mes compétences techniques d'ingénieur par mon expérience d'étudiant-entrepreneur.",
+    "projectsButton": "Voir mes projets",
+    "contactButton": "Me contacter",
+    "profileAlt": "Arthur Blamart"
+  },
+  "about": {
+    "sectionTitle": "À propos de moi",
+    "rewardsTitle": "Mes récompenses",
+    "reward": {
+      "title": "Lauréat Coup de pouce Pépite",
+      "date": "Février 2025",
+      "beforeKeyword1": "Sélectionné par ",
+      "keyword1": "Pépite Bretagne",
+      "between1": " pour l'innovation et le potentiel de ",
+      "keyword2": "Vizeo",
+      "between2": ". Ce prix s'accompagne d'une bourse de 2 000 € décernée par la ",
+      "keyword3": "Fondation de l'Université de Rennes",
+      "afterKeyword3": ". Ce financement est directement investi dans l'achat des composants pour notre MVP et le lancement de la démarche de pré-certification CE."
+    },
+    "educationTitle": "Mon parcours académique",
+    "education": [
+      {
+        "iconAlt": "ENSSAT",
+        "title": "École Nationale Supérieure des Sciences Appliquées et de Technologie (ENSSAT)",
+        "date": "Septembre 2023 - Aujourd'hui",
+        "description": "Formation d'ingénieur en informatique — cours et projets en gestion de projet, architectures logicielles et développement web."
+      },
+      {
+        "iconAlt": "Descartes",
+        "title": "Classe préparatoire scientifique (MPI)",
+        "date": "Septembre 2021 - Juillet 2023",
+        "description": "Filière Mathématiques, Physique et Informatique — acquisition d'un solide socle en informatique théorique et mathématiques."
+      }
+    ],
+    "engagementsTitle": "Mes engagements & missions",
+    "engagements": [
+      {
+        "iconAlt": "Pépite Bretagne",
+        "title": "Étudiant-Entrepreneur — PEPITE Bretagne",
+        "date": "Fév 2025 - Mar 2025",
+        "description": "Développement d'un projet entrepreneurial, formations et accompagnements par des professionnels."
+      },
+      {
+        "iconAlt": "BRIO",
+        "title": "Étudiant Ambassadeur — BRIO (Université de Rennes)",
+        "description": "Aide à l'orientation des élèves du secondaire et actions de sensibilisation."
+      },
+      {
+        "iconAlt": "JES",
+        "title": "Président d'association - Junior ENSSAT Services",
+        "date": "Nov 2024 - Mai 2025",
+        "description": "Gestion d'équipe et d'association, pilotage de missions de service et organisation d'événements."
+      },
+      {
+        "iconAlt": "Docker",
+        "title": "Mission DevOps",
+        "date": "Octobre 2025",
+        "description": "Conteneurisation avec Docker et déploiement d'une application sur Scaleway. Mise en place d'un pipeline de déploiement continu."
+      }
+    ],
+    "softSkillsTitle": "Savoir-être",
+    "softSkills": [
+      "Rigueur",
+      "Capacité d'adaptation",
+      "Esprit d'équipe",
+      "Autonomie",
+      "Organisation & gestion de projet"
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Mes Compétences",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Outils"
+    }
+  },
+  "projects": {
+    "sectionTitle": "Mes Projets de dev",
+    "applicationsTitle": "Applications",
+    "websitesTitle": "Sites Web",
+    "statuses": {
+      "inProgress": "En cours",
+      "completed": "Terminé"
+    },
+    "viewSite": "Voir le site",
+    "applications": [
+      {
+        "title": "Gestion Client",
+        "description": "API REST pour la gestion des clients avec interfaces pour manipulation des données.",
+        "technologies": ["REST", "API", "Swagger", "Express", "Node.js", "React", "Tailwind CSS"],
+        "github": "https://github.com/Arthur-Blamart/GestionClient",
+        "status": "inProgress"
+      },
+      {
+        "title": "Simulation course IA",
+        "description": "Algorithme de simulation de course utilisant un algorithme de réflexion et un moteur physique.",
+        "technologies": ["Python"],
+        "github": "https://github.com/Arthur-Blamart/parcours-generatif",
+        "status": "inProgress"
+      }
+    ],
+    "websites": [
+      {
+        "title": "Site vitrine pour un gîte",
+        "description": "Promotion et présentation d'un gîte.",
+        "technologies": ["React", "Vite", "OVH"],
+        "github": "https://github.com/Arthur-Blamart/client-lespiguet",
+        "url": "https://location-artynevez.fr",
+        "status": "completed"
+      },
+      {
+        "title": "Portfolio personnel",
+        "description": "Site personnel pour présenter mes projets et compétences.",
+        "technologies": ["React", "Vite", "OVH"],
+        "github": "https://github.com/Arthur-Blamart/Portfolio",
+        "url": "https://arthurblamart.fr",
+        "status": "completed"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Contactez-moi",
+    "title": "Discutons de votre projet",
+    "description": "Vous avez un projet en tête ? N'hésitez pas à me contacter pour discuter de vos besoins. Je serai ravi de vous accompagner dans la réalisation de vos objectifs.",
+    "methods": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "locationValue": "Lannion, France (Remote possible)"
+    },
+    "form": {
+      "name": "Nom *",
+      "email": "Email *",
+      "subject": "Sujet",
+      "message": "Message *",
+      "submit": "Envoyer le message"
+    },
+    "alerts": {
+      "success": "Message envoyé ! Je vous répondrai rapidement.",
+      "error": "Une erreur s'est produite lors de l'envoi du message."
+    }
+  },
+  "footer": {
+    "description": "Développeur Freelance passionné par la création d'expériences web exceptionnelles.",
+    "navigation": "Navigation",
+    "links": [
+      { "id": "about", "label": "À propos" },
+      { "id": "skills", "label": "Compétences" },
+      { "id": "projects", "label": "Projets" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "contact": "Contact",
+    "copyright": "© 2025 Arthur. Tous droits réservés."
+  }
+}

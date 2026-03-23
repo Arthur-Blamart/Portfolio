@@ -19,10 +19,10 @@ import {
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 
-const Skills = () => {
+const Skills = ({ content }) => {
   const skillCategories = {
     frontend: {
-      title: 'Frontend',
+      title: content.categories.frontend,
       skills: [
         {
           title: 'HTML5',
@@ -47,7 +47,7 @@ const Skills = () => {
       ]
     },
     backend: {
-      title: 'Backend',
+      title: content.categories.backend,
       skills: [
         {
           title: 'C',
@@ -77,7 +77,7 @@ const Skills = () => {
       ]
     },
     tools: {
-      title: 'Outils',
+      title: content.categories.tools,
       skills: [
         {
           title: 'Git',
@@ -116,7 +116,7 @@ const Skills = () => {
   return (
     <section className="skills" id="skills">
       <div className="container">
-        <h2 className="section-title">Mes Compétences</h2>
+        <h2 className="section-title">{content.sectionTitle}</h2>
         <div className="skills-categories">
           {Object.entries(skillCategories).map(([categoryKey, category]) => (
             <div key={categoryKey} className="skill-category">

@@ -7,78 +7,66 @@ import logoBrio from '../assets/brio.jpeg';
 import logoJes from '../assets/jes.png';
 import logoDocker from '../assets/docker.png';
 
-const About = () => {
+const educationLogos = [logoEnssat, logoDescartes];
+const engagementLogos = [logoPepite, logoBrio, logoJes, logoDocker];
+
+const About = ({ content }) => {
+  const reward = content.reward;
+
   return (
     <section className="about" id="about">
       <div className="container">
-        <h2 className="section-title">À propos de moi</h2>
+        <h2 className="section-title">{content.sectionTitle}</h2>
         <div className="about-content">
 
           <div className="about-text">
-              <h3>Mes récompenses</h3>
+              <h3>{content.rewardsTitle}</h3>
               <div className="rewards-list">
                 <div className="reward-item">
-                  <h4>Lauréat Coup de pouce Pépite</h4>
-                  <span className="reward-date">Février 2025</span>
-                  <p>Sélectionné par <strong>Pépite Bretagne</strong> pour l'innovation et le potentiel de <strong>Vizeo</strong>. Ce prix s'accompagne d'une bourse de 2 000 € décernée par la <strong>Fondation de l'Université de Rennes</strong>. Ce financement est directement investi dans l'achat des composants pour notre MVP et le lancement de la démarche de pré-certification CE.</p>
+                  <h4>{reward.title}</h4>
+                  <span className="reward-date">{reward.date}</span>
+                  <p>
+                    {reward.beforeKeyword1}
+                    <strong>{reward.keyword1}</strong>
+                    {reward.between1}
+                    <strong>{reward.keyword2}</strong>
+                    {reward.between2}
+                    <strong>{reward.keyword3}</strong>
+                    {reward.afterKeyword3}
+                  </p>
                 </div>
               </div>
 
-              <h3>Mon parcours académique</h3>
+              <h3>{content.educationTitle}</h3>
               <div className="education-list">
-                <div className="education-item">
-                  <div className="item-icon"><img src={logoEnssat} alt="ENSSAT"/></div>
-                  <h4>École Nationale Supérieure des Sciences Appliquées et de Technologie (ENSSAT)</h4>
-                  <span className="education-date">Septembre 2023 - Aujourd'hui</span>
-                  <p>Formation d'ingénieur en informatique — cours et projets en gestion de projet, architectures logicielles et développement web.</p>
-                </div>
-
-                <div className="education-item">
-                  <div className="item-icon"><img src={logoDescartes} alt="Descartes"/></div>
-                  <h4>Classe préparatoire scientifique (MPI)</h4>
-                  <span className="education-date">Septembre 2021 - Juillet 2023</span>
-                  <p>Filière Mathématiques, Physique et Informatique — acquisition d'un solide socle en informatique théorique et mathématiques.</p>
-                </div>
+                {content.education.map((item, index) => (
+                  <div className="education-item" key={`${item.title}-${index}`}>
+                    <div className="item-icon"><img src={educationLogos[index]} alt={item.iconAlt}/></div>
+                    <h4>{item.title}</h4>
+                    <span className="education-date">{item.date}</span>
+                    <p>{item.description}</p>
+                  </div>
+                ))}
               </div>
 
-              <h3>Mes engagements & missions</h3>
+              <h3>{content.engagementsTitle}</h3>
               <div className="engagements-grid">
-                <div className="engagement-item">
-                  <div className="item-icon"><img src={logoPepite} alt="Pépite Bretagne"/></div>
-                  <h4>Étudiant Entrepreneur — PEPITE Bretagne</h4>
-                  <span className="engagement-date">Fév 2025 - Mar 2025</span>
-                  <p>Développement d'un projet entrepreneurial, formations et accompagnements par des professionnel.</p>
-                </div>
-
-                <div className="engagement-item">
-                  <div className="item-icon"><img src={logoBrio} alt="BRIO"/></div>
-                  <h4>Étudiant Ambassadeur — BRIO (Université de Rennes)</h4>
-                  <p>Aide à l'orientation des élèves du secondaires et formations.</p>
-                </div>
-
-                <div className="engagement-item">
-                  <div className="item-icon"><img src={logoJes} alt="JES"/></div>
-                  <h4>Président d'association - Junior ENSSAT Services</h4>
-                  <span className="engagement-date">Nov 2024 - Mai 2025</span>
-                  <p>Gestion d'équipe & d'association, pilotage de mission de service et organisation d'événements.</p>
-                </div>
-
-                <div className="engagement-item">
-                  <div className="item-icon"><img src={logoDocker} alt="Docker"/></div>
-                  <h4>Mission DevOps</h4>
-                  <span className="engagement-date">Octobre 2025</span>
-                  <p>Conteneurisation, par Docker, et déploiement d'une application sur Scaleway. Installation d'un pipeline de déploiement continu.</p>
-                </div>
+                {content.engagements.map((item, index) => (
+                  <div className="engagement-item" key={`${item.title}-${index}`}>
+                    <div className="item-icon"><img src={engagementLogos[index]} alt={item.iconAlt}/></div>
+                    <h4>{item.title}</h4>
+                    {item.date && <span className="engagement-date">{item.date}</span>}
+                    <p>{item.description}</p>
+                  </div>
+                ))}
 
               </div>
 
-              <h3>Savoir-être</h3>
+              <h3>{content.softSkillsTitle}</h3>
               <ul className="skills-list">
-                <li>Rigueur</li>
-                <li>Capacité d'adaptation</li>
-                <li>Esprit d'équipe</li>
-                <li>Autonomie</li>
-                <li>Organisation & gestion de projet</li>
+                {content.softSkills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
               </ul>
           </div>
         </div>

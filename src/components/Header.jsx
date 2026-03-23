@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ language, onLanguageChange, content }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId) => {
@@ -16,17 +16,21 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLanguageChange = () => {
+    onLanguageChange(language === 'fr' ? 'en' : 'fr');
+  };
+
   return (
     <header className="header">
       <nav className="nav">
         <div className="nav-brand">
-          <h2>Arthur Blamart</h2>
+          <h2>{content.brand}</h2>
         </div>
         
         <button 
           className="mobile-menu-toggle"
           onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
+          aria-label={content.ariaToggle}
         >
           <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
           <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
@@ -34,11 +38,25 @@ const Header = () => {
         </button>
         
         <ul className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
-          <li><button onClick={() => scrollToSection('about')}>À propos</button></li>
-          <li><button onClick={() => scrollToSection('skills')}>Compétences</button></li>
-          <li><button onClick={() => scrollToSection('projects')}>Projets</button></li>
-          <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
+          {content.menu.map((item) => (
+            <li key={item.id}>
+              <button onClick={() => scrollToSection(item.id)}>{item.label}</button>
+            </li>
+          ))}
         </ul>
+
+        <div className="language-toggle" role="group" aria-label="Language selector">
+          <span className="lang-label">{content.lang.fr}</span>
+          <button
+            type="button"
+            className={`lang-slider ${language === 'en' ? 'en-active' : ''}`}
+            onClick={handleLanguageChange}
+            aria-label={`Switch language to ${language === 'fr' ? 'English' : 'French'}`}
+          >
+            <span className="lang-thumb" />
+          </button>
+          <span className="lang-label">{content.lang.en}</span>
+        </div>
       </nav>
     </header>
   );

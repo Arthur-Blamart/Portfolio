@@ -3,46 +3,9 @@ import './Projects.css';
 import { SiReact, SiNodedotjs, SiFirebase, SiVite, SiCss3, SiTailwindcss, SiExpress, SiGithub } from 'react-icons/si';
 import { FaServer, FaCode } from 'react-icons/fa';
 
-const Projects = () => {
-  const applications = [
-    {
-      title: 'Gestion Client',
-      description: 'API REST pour la gestion des clients avec interfaces pour manipulation des données.',
-      technologies: ['REST', 'API', 'Swagger', 'Express', 'Node.js', 'React', 'Tailwind CSS'],
-      image: '💼',
-      github: 'https://github.com/Arthur-Blamart/GestionClient',
-      status: 'En cours'
-    },
-    {
-      title: 'Simulation course IA',
-      description: 'Algorithme de simulation de course utilisant un algorithme de réfléxion et un moteur physique',
-      technologies: ['Python'],
-      image: '🕹️',
-      github: 'https://github.com/Arthur-Blamart/parcours-generatif',
-      status: 'En cours'
-    }
-  ];
-
-  const websites = [
-    {
-      title: 'Site Vitrine pour un gîte',
-      description: 'Promotions et présentation de gîte.',
-      technologies: ['React', 'Vite', 'OVH'],
-      image: '🏡',
-      github: 'https://github.com/Arthur-Blamart/client-lespiguet',
-      url: 'https://location-artynevez.fr',
-      status: 'Terminé'
-    },
-    {
-      title: 'Portfolio Personnel',
-      description: 'Site personnel pour présenter mes projets et compétences.',
-      technologies: ['React', 'Vite', 'OVH'],
-      image: '🏛️',
-      github: 'https://github.com/Arthur-Blamart/Portfolio',
-      url: 'https://arthurblamart.fr',
-      status: 'Terminé'
-    }
-  ];
+const Projects = ({ content }) => {
+  const applications = content.applications;
+  const websites = content.websites;
 
   const selectIcon = (technologies) => {
     const techs = technologies.map(t => t.toLowerCase());
@@ -65,8 +28,8 @@ const Projects = () => {
           {selectIcon(project.technologies)}
         </div>
         <div className="project-status">
-          <span className={`status-badge ${project.status === 'Terminé' ? 'completed' : 'in-progress'}`}>
-            {project.status}
+          <span className={`status-badge ${project.status === 'completed' ? 'completed' : 'in-progress'}`}>
+            {content.statuses[project.status]}
           </span>
         </div>
       </div>
@@ -84,7 +47,7 @@ const Projects = () => {
           </a>
           {project.url && (
             <a href={project.url} className="project-link website" target="_blank" rel="noopener noreferrer">
-              <span>Voir le site</span>
+              <span>{content.viewSite}</span>
             </a>
           )}
         </div>
@@ -95,12 +58,12 @@ const Projects = () => {
   return (
     <section className="projects" id="projects">
       <div className="container">
-        <h2 className="section-title">Mes Projets de dev</h2>
+        <h2 className="section-title">{content.sectionTitle}</h2>
         
         <div className="projects-sections">
           {/* Section Applications */}
           <div className="projects-section">
-            <h3 className="subsection-title">Applications</h3>
+            <h3 className="subsection-title">{content.applicationsTitle}</h3>
             <div className="projects-grid">
               {applications.map((project, index) => renderProjectCard(project, index))}
             </div>
@@ -108,7 +71,7 @@ const Projects = () => {
 
           {/* Section Sites Web */}
           <div className="projects-section">
-            <h3 className="subsection-title">Sites Web</h3>
+            <h3 className="subsection-title">{content.websitesTitle}</h3>
             <div className="projects-grid">
               {websites.map((project, index) => renderProjectCard(project, index))}
             </div>
