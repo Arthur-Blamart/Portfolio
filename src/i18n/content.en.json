@@ -170,5 +170,19 @@
     ],
     "contact": "Contact",
     "copyright": "© 2025 Arthur. All rights reserved."
+  },
+  "seo": {
+    "lang": "en",
+    "title": "Arthur BLAMART — Computer Engineering Student & React Developer | ENSSAT",
+    "description": "Arthur BLAMART — Computer engineering student at ENSSAT and React/JavaScript developer. Explore academic, web, and entrepreneurial projects.",
+    "keywords": "Arthur BLAMART, Arthur Blamart, freelance developer, web developer, React developer, JavaScript, Node.js, ENSSAT, Étudiant-Entrepreneur, Pépite Bretagne, portfolio, Lannion",
+    "ogTitle": "Arthur BLAMART — Computer Engineering Student & React Developer",
+    "ogDescription": "Computer engineering student at ENSSAT, React/JavaScript developer, and Étudiant-Entrepreneur. Discover my academic and personal projects.",
+    "twitterTitle": "Arthur BLAMART — Computer Engineering Student & React Developer",
+    "twitterDescription": "Computer engineering student at ENSSAT, React/JavaScript developer, and Étudiant-Entrepreneur. Discover my academic and personal projects.",
+    "structuredData": {
+      "jobTitle": "Computer Engineering Student & React Developer",
+      "description": "Computer engineering student at ENSSAT and developer specialized in React and JavaScript. Portfolio of academic and personal projects."
+    }
   }
 }
