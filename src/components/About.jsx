@@ -13,7 +13,17 @@ const About = () => {
       <div className="container">
         <h2 className="section-title">À propos de moi</h2>
         <div className="about-content">
+
           <div className="about-text">
+              <h3>Mes récompenses</h3>
+              <div className="rewards-list">
+                <div className="reward-item">
+                  <h4>Lauréat Coup de pouce Pépite</h4>
+                  <span className="reward-date">Février 2025</span>
+                  <p>Sélectionné par <strong>Pépite Bretagne</strong> pour l'innovation et le potentiel de <strong>Vizeo</strong>. Ce prix s'accompagne d'une bourse de 2 000 € décernée par la <strong>Fondation de l'Université de Rennes</strong>. Ce financement est directement investi dans l'achat des composants pour notre MVP et le lancement de la démarche de pré-certification CE.</p>
+                </div>
+              </div>
+
               <h3>Mon parcours académique</h3>
               <div className="education-list">
                 <div className="education-item">
