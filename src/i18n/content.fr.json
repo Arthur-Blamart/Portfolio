@@ -94,48 +94,68 @@
     }
   },
   "projects": {
-    "sectionTitle": "Mes Projets de dev",
-    "applicationsTitle": "Applications",
-    "websitesTitle": "Sites Web",
-    "statuses": {
-      "inProgress": "En cours",
-      "completed": "Terminé"
-    },
-    "viewSite": "Voir le site",
-    "applications": [
+    "sectionTitle": "Mon dernier projet en date",
+    "badge": "Projet informatique embarqué & entrepreneurial",
+    "projectTitle": "VizeoCast",
+    "projectSubtitle": "La simplicité et l'immersion au service de la formation",
+    "tagline": "Un boitier intelligent qui transforme n'importe quelle salle de cours en studio de diffusion hybride, sans compétence technique requise.",
+    "problemTitle": "Le problème",
+    "problemText": "Cours à distance de qualité médiocre. Solutions trop chères (Cisco, Poly à +10 000 €), trop complexes, ou limitées au logiciel (Zoom, Teams) dépendant d'un PC et d'une webcam.",
+    "solutionTitle": "La solution",
+    "solutionText": "Un boitier autonome qui se branche, s'allume, et diffuse. L'enseignant partage un QR code, les élèves rejoignent en un clic depuis leur navigateur — sans inscription, sans logiciel.",
+    "contributionTitle": "Ce que j'ai développé",
+    "contributionBlocks": [
       {
-        "title": "Gestion Client",
-        "description": "API REST pour la gestion des clients avec interfaces pour manipulation des données.",
-        "technologies": ["REST", "API", "Swagger", "Express", "Node.js", "React", "Tailwind CSS"],
-        "github": "https://github.com/Arthur-Blamart/GestionClient",
-        "status": "inProgress"
+        "title": "Embarqué",
+        "subtitle": "Raspberry Pi 5",
+        "items": [
+          "Tracking IA du professeur en temps réel — Hailo-8L (13 TOPS)",
+          "Double caméra 12 Mpx : grand angle + téléphoto",
+          "Pipeline capture → IA (YOLOv8) → H.264 → WebRTC",
+          "Multi-processus + mémoire partagée, latence < 200 ms"
+        ]
       },
       {
-        "title": "Simulation course IA",
-        "description": "Algorithme de simulation de course utilisant un algorithme de réflexion et un moteur physique.",
-        "technologies": ["Python"],
-        "github": "https://github.com/Arthur-Blamart/parcours-generatif",
-        "status": "inProgress"
+        "title": "Serveur",
+        "subtitle": "Node.js sur Scaleway",
+        "items": [
+          "SFU WebRTC basé sur mediasoup",
+          "API REST, JWT, PostgreSQL",
+          "Rooms cloisonnées par établissement",
+          "WebSocket temps réel : sondages, QCM, main levée",
+          "Caddy + HTTPS auto (Let's Encrypt)",
+          "Déploiement continu via Git + PM2"
+        ]
+      },
+      {
+        "title": "Produit",
+        "subtitle": "Hardware & business",
+        "items": [
+          "Boitier 3D conçu sur OpenSCAD pour impression FDM",
+          "Kit conformité RGPD / droit à l'image",
+          "Modèle hybride : 1 100 € HT + 40 € HT/mois SaaS"
+        ]
       }
     ],
-    "websites": [
+    "stackTitle": "Stack technique",
+    "stack": ["Python", "Node.js", "PostgreSQL", "WebRTC", "mediasoup", "GStreamer", "HailoRT", "YOLOv8", "Raspberry Pi 5", "Caddy", "Scaleway", "PM2", "Git"],
+    "resultsTitle": "Résultats",
+    "results": [
       {
-        "title": "Site vitrine pour un gîte",
-        "description": "Promotion et présentation d'un gîte.",
-        "technologies": ["React", "Vite", "OVH"],
-        "github": "https://github.com/Arthur-Blamart/client-lespiguet",
-        "url": "https://location-artynevez.fr",
-        "status": "completed"
+        "highlight": "2 000 €",
+        "label": "Bourse Coup de Pouce — Fondation de l'Université de Rennes"
       },
       {
-        "title": "Portfolio personnel",
-        "description": "Site personnel pour présenter mes projets et compétences.",
-        "technologies": ["React", "Vite", "OVH"],
-        "github": "https://github.com/Arthur-Blamart/Portfolio",
-        "url": "https://arthurblamart.fr",
-        "status": "completed"
+        "highlight": "PEPITE & ENSSAT",
+        "label": "Accompagné par PEPITE Bretagne et l'ENSSAT Lannion"
+      },
+      {
+        "highlight": "37 M€",
+        "label": "Marché adressable en France (secondaire, supérieur, formation)"
       }
-    ]
+    ],
+    "ctaLabel": "En savoir plus sur VizeoCast",
+    "ctaUrl": "https://vizeocast.fr"
   },
   "contact": {
     "sectionTitle": "Contactez-moi",
@@ -160,7 +180,7 @@
     }
   },
   "footer": {
-    "description": "Développeur Freelance passionné par la création d'expériences web exceptionnelles.",
+    "description": "Élève-ingénieur en informatique spécialisé en intelligence artificielle à l'ENSSAT et étudiant-entrepreneur de Pépite Bretagne.",
     "navigation": "Navigation",
     "links": [
       { "id": "about", "label": "À propos" },

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Footer = ({ content }) => {
   return (
@@ -25,8 +26,8 @@ const Footer = ({ content }) => {
             <p>pro@arthurblamart.fr</p>
             <p>+33 7 70 46 80 83</p>
             <div className="footer-socials">
-              <a href="https://fr.linkedin.com/in/arthur-blamart-081ba9294" aria-label="LinkedIn">💼</a>
-              <a href="https://github.com//Arthur-Blamart" aria-label="GitHub">🔗</a>
+              <a href="https://fr.linkedin.com/in/arthur-blamart-081ba9294" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+              <a href="https://github.com/Arthur-Blamart" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
             </div>
           </div>
         </div>

@@ -72,12 +72,18 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   text-decoration: none;
-  font-size: 1.2rem;
+  color: #f9fafb;
   transition: all 0.3s ease;
+}
+
+.footer-socials a svg {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .footer-socials a:hover {
   background: #fbbf24;
+  color: #1f2937;
   transform: translateY(-2px);
 }
 

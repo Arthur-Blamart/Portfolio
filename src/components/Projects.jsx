@@ -1,81 +1,84 @@
 import React from 'react';
 import './Projects.css';
-import { SiReact, SiNodedotjs, SiFirebase, SiVite, SiCss3, SiTailwindcss, SiExpress, SiGithub } from 'react-icons/si';
-import { FaServer, FaCode } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = ({ content }) => {
-  const applications = content.applications;
-  const websites = content.websites;
-
-  const selectIcon = (technologies) => {
-    const techs = technologies.map(t => t.toLowerCase());
-    if (techs.some(t => t.includes('react'))) return <SiReact />;
-    if (techs.some(t => t.includes('node'))) return <SiNodedotjs />;
-    if (techs.some(t => t.includes('firebase'))) return <SiFirebase />;
-    if (techs.some(t => t.includes('vite'))) return <SiVite />;
-    if (techs.some(t => t.includes('tailwind'))) return <SiTailwindcss />;
-    if (techs.some(t => t.includes('express'))) return <SiExpress />;
-    if (techs.some(t => t.includes('css'))) return <SiCss3 />;
-    if (techs.some(t => t.includes('github'))) return <SiGithub />;
-    if (techs.some(t => t.includes('rest') || t.includes('api') || t.includes('swagger'))) return <FaServer />;
-    return <FaCode />;
-  };
-
-  const renderProjectCard = (project, index) => (
-    <div key={index} className="project-card">
-      <div className="project-image">
-        <div className="project-icon" aria-hidden>
-          {selectIcon(project.technologies)}
-        </div>
-        <div className="project-status">
-          <span className={`status-badge ${project.status === 'completed' ? 'completed' : 'in-progress'}`}>
-            {content.statuses[project.status]}
-          </span>
-        </div>
-      </div>
-      <div className="project-content">
-        <h3 className="project-title">{project.title}</h3>
-        <p className="project-description">{project.description}</p>
-        <div className="project-technologies">
-          {project.technologies.map((tech, techIndex) => (
-            <span key={techIndex} className="tech-tag">{tech}</span>
-          ))}
-        </div>
-        <div className="project-links">
-          <a href={project.github} className="project-link github" target="_blank" rel="noopener noreferrer">
-            <span>GitHub</span>
-          </a>
-          {project.url && (
-            <a href={project.url} className="project-link website" target="_blank" rel="noopener noreferrer">
-              <span>{content.viewSite}</span>
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-
   return (
-    <section className="projects" id="projects">
+    <section className="latest-project" id="projects">
       <div className="container">
         <h2 className="section-title">{content.sectionTitle}</h2>
-        
-        <div className="projects-sections">
-          {/* Section Applications */}
-          <div className="projects-section">
-            <h3 className="subsection-title">{content.applicationsTitle}</h3>
-            <div className="projects-grid">
-              {applications.map((project, index) => renderProjectCard(project, index))}
-            </div>
-          </div>
 
-          {/* Section Sites Web */}
-          <div className="projects-section">
-            <h3 className="subsection-title">{content.websitesTitle}</h3>
-            <div className="projects-grid">
-              {websites.map((project, index) => renderProjectCard(project, index))}
-            </div>
+        <div className="vizeocast-hero">
+          <span className="vizeocast-badge">{content.badge}</span>
+          <h3 className="vizeocast-title">{content.projectTitle}</h3>
+          <p className="vizeocast-subtitle">{content.projectSubtitle}</p>
+          <p className="vizeocast-tagline">{content.tagline}</p>
+        </div>
+
+        <div className="vizeocast-grid vizeocast-grid-two">
+          <div className="vizeocast-block">
+            <h4 className="block-title">{content.problemTitle}</h4>
+            <p className="block-text">{content.problemText}</p>
           </div>
+          <div className="vizeocast-block vizeocast-block-accent">
+            <h4 className="block-title">{content.solutionTitle}</h4>
+            <p className="block-text">{content.solutionText}</p>
+          </div>
+        </div>
+
+        <div className="vizeocast-section-block">
+          <h4 className="vizeocast-section-title">{content.contributionTitle}</h4>
+          <div className="vizeocast-grid vizeocast-grid-three">
+            {content.contributionBlocks.map((block, idx) => (
+              <div className="contribution-card" key={idx}>
+                <div className="contribution-card-header">
+                  <span className="contribution-card-number">{String(idx + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h5 className="contribution-card-title">{block.title}</h5>
+                    <span className="contribution-card-subtitle">{block.subtitle}</span>
+                  </div>
+                </div>
+                <ul className="contribution-list">
+                  {block.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="vizeocast-section-block">
+          <h4 className="vizeocast-section-title">{content.stackTitle}</h4>
+          <div className="stack-tags">
+            {content.stack.map((tech, i) => (
+              <span key={i} className="stack-tag">{tech}</span>
+            ))}
+          </div>
+        </div>
+
+        <div className="vizeocast-section-block">
+          <h4 className="vizeocast-section-title">{content.resultsTitle}</h4>
+          <div className="vizeocast-grid vizeocast-grid-three">
+            {content.results.map((result, i) => (
+              <div className="result-card" key={i}>
+                <span className="result-highlight">{result.highlight}</span>
+                <span className="result-label">{result.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="vizeocast-cta">
+          <a
+            href={content.ctaUrl}
+            className="vizeocast-cta-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>{content.ctaLabel}</span>
+            <FaExternalLinkAlt aria-hidden />
+          </a>
         </div>
       </div>
     </section>

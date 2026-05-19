@@ -94,48 +94,68 @@
     }
   },
   "projects": {
-    "sectionTitle": "My Development Projects",
-    "applicationsTitle": "Applications",
-    "websitesTitle": "Websites",
-    "statuses": {
-      "inProgress": "In progress",
-      "completed": "Completed"
-    },
-    "viewSite": "View website",
-    "applications": [
+    "sectionTitle": "My latest project",
+    "badge": "Embedded computing & entrepreneurial project",
+    "projectTitle": "VizeoCast",
+    "projectSubtitle": "Simplicity and immersion for training",
+    "tagline": "A smart device that turns any classroom into a hybrid broadcast studio — no technical skills required.",
+    "problemTitle": "The problem",
+    "problemText": "Remote courses suffer from poor video and audio quality. Existing solutions are too expensive (Cisco, Poly at €10,000+), too complex, or limited to software (Zoom, Teams) depending on a PC and a webcam.",
+    "solutionTitle": "The solution",
+    "solutionText": "A standalone device that plugs in, turns on, and broadcasts. The teacher shares a QR code, students join in one click from their browser — no signup, no software.",
+    "contributionTitle": "What I built",
+    "contributionBlocks": [
       {
-        "title": "Client Management",
-        "description": "REST API for customer management with interfaces for data handling.",
-        "technologies": ["REST", "API", "Swagger", "Express", "Node.js", "React", "Tailwind CSS"],
-        "github": "https://github.com/Arthur-Blamart/GestionClient",
-        "status": "inProgress"
+        "title": "Embedded",
+        "subtitle": "Raspberry Pi 5",
+        "items": [
+          "Real-time AI teacher tracking — Hailo-8L (13 TOPS)",
+          "Dual 12 MP cameras: wide-angle + telephoto",
+          "Pipeline: capture → AI (YOLOv8) → H.264 → WebRTC",
+          "Multi-process + shared memory, < 200 ms latency"
+        ]
       },
       {
-        "title": "AI race simulation",
-        "description": "Race simulation algorithm using a decision-making algorithm and a physics engine.",
-        "technologies": ["Python"],
-        "github": "https://github.com/Arthur-Blamart/parcours-generatif",
-        "status": "inProgress"
+        "title": "Server",
+        "subtitle": "Node.js on Scaleway",
+        "items": [
+          "mediasoup-based WebRTC SFU",
+          "REST API, JWT, PostgreSQL",
+          "Per-institution rooms with strict data isolation",
+          "Real-time WebSocket: polls, quizzes, raise-hand",
+          "Caddy + automatic HTTPS (Let's Encrypt)",
+          "Continuous deployment via Git + PM2"
+        ]
+      },
+      {
+        "title": "Product",
+        "subtitle": "Hardware & business",
+        "items": [
+          "3D enclosure designed in OpenSCAD for FDM printing",
+          "GDPR / image rights compliance kit",
+          "Hybrid model: €1,100 excl. VAT + €40/mo SaaS"
+        ]
       }
     ],
-    "websites": [
+    "stackTitle": "Tech stack",
+    "stack": ["Python", "Node.js", "PostgreSQL", "WebRTC", "mediasoup", "GStreamer", "HailoRT", "YOLOv8", "Raspberry Pi 5", "Caddy", "Scaleway", "PM2", "Git"],
+    "resultsTitle": "Results",
+    "results": [
       {
-        "title": "Showcase website for a guesthouse",
-        "description": "Promotion and presentation of a guesthouse.",
-        "technologies": ["React", "Vite", "OVH"],
-        "github": "https://github.com/Arthur-Blamart/client-lespiguet",
-        "url": "https://location-artynevez.fr",
-        "status": "completed"
+        "highlight": "€2,000",
+        "label": "Coup de Pouce grant — Fondation de l'Université de Rennes"
       },
       {
-        "title": "Personal portfolio",
-        "description": "Personal website to showcase my projects and skills.",
-        "technologies": ["React", "Vite", "OVH"],
-        "github": "https://github.com/Arthur-Blamart/Portfolio",
-        "url": "https://arthurblamart.fr",
-        "status": "completed"
+        "highlight": "PEPITE & ENSSAT",
+        "label": "Supported by PEPITE Bretagne and ENSSAT Lannion"
+      },
+      {
+        "highlight": "€37M",
+        "label": "Addressable market in France (secondary, higher ed, training)"
       }
-    ]
+    ],
+    "ctaLabel": "Learn more about VizeoCast",
+    "ctaUrl": "https://vizeocast.fr"
   },
   "contact": {
     "sectionTitle": "Contact me",
@@ -160,7 +180,7 @@
     }
   },
   "footer": {
-    "description": "Freelance developer passionate about building exceptional web experiences.",
+    "description": "Computer engineering student specializing in artificial intelligence at ENSSAT and Étudiant-Entrepreneur with Pépite Bretagne.",
     "navigation": "Navigation",
     "links": [
       { "id": "about", "label": "About" },

@@ -47,7 +47,18 @@
 }
 
 .method-icon {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  color: #64ffda;
+}
+
+.method-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .method-info h4 {
@@ -183,8 +194,9 @@
     margin-bottom: 1rem;
   }
   
-  .method-icon {
-    font-size: 1.8rem;
+  .method-icon svg {
+    width: 1.6rem;
+    height: 1.6rem;
   }
   
   .method-info h4 {
@@ -238,8 +250,9 @@
     gap: 0.75rem;
   }
   
-  .method-icon {
-    font-size: 2rem;
+  .method-icon svg {
+    width: 1.8rem;
+    height: 1.8rem;
   }
   
   .method-info h4 {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = ({ content }) => {
   const [formData, setFormData] = useState({
@@ -58,7 +59,7 @@ const Contact = ({ content }) => {
             
             <div className="contact-methods">
               <div className="contact-method">
-                <div className="method-icon">📧</div>
+                <div className="method-icon" aria-hidden><FaEnvelope /></div>
                 <div className="method-info">
                   <h4>{content.methods.email}</h4>
                   <a href="mailto:pro@arthurblamart.fr" className="contact-link">
@@ -66,9 +67,9 @@ const Contact = ({ content }) => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="contact-method">
-                <div className="method-icon">📱</div>
+                <div className="method-icon" aria-hidden><FaPhone /></div>
                 <div className="method-info">
                   <h4>{content.methods.phone}</h4>
                   <a href="tel:+33770468083" className="contact-link">
@@ -76,9 +77,9 @@ const Contact = ({ content }) => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="contact-method">
-                <div className="method-icon">📍</div>
+                <div className="method-icon" aria-hidden><FaMapMarkerAlt /></div>
                 <div className="method-info">
                   <h4>{content.methods.location}</h4>
                   <p>{content.methods.locationValue}</p>
